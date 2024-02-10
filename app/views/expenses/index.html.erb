@@ -1,0 +1,34 @@
+   <div class='card text-center'> 
+    
+    <p style="color: green"><%= notice %></p>
+
+    <h1>Expenses</h1>
+
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Description</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+    </tbody>
+    <div id="expenses">
+      <% @expenses.each do |expense| %>
+        <%= render expense %>
+        <p>
+          <%= link_to "Show this expense", expense %>
+        </p>
+      <% end %>
+    </div>
+
+      
+
+    <div class="font-extrabold">
+      <%= link_to "New expense",  new_expense_path  %>
+    </div>
+</div>
