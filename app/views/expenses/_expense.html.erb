@@ -1,27 +1,18 @@
-<div id="<%= dom_id expense %>">
-  <p>
-    <strong>Name:</strong>
-    <%= expense.name %>
-  </p>
+<tr id="<%= dom_id expense %>" >
+  <td><%= expense.name %></td>
+  <td><%= expense.date %></td>
+  <td><%= expense.amount %></td>
+  <td><%= expense.description %></td>
+  <td><%= expense.category %></td>
+  <td><%= link_to "Show this expense", expense %></td>
+  <td><%= link_to "Edit this expense", edit_expense_path(expense) %></td>
+  <td><%= button_to "Destroy this expense", expense, method: :delete %></td>
+</tr>
 
-  <p>
-    <strong>Date:</strong>
-    <%= expense.date %>
-  </p>
 
-  <p>
-    <strong>Amount:</strong>
-    <%= expense.amount %>
-  </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= expense.description %>
-  </p>
 
-  <p>
-    <strong>Category</strong>
-    <%= expense.category %>
-  </p>
 
-</div>
+
+
+
